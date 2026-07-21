@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRIÈL Bakery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/style.css?v=2">
+
+</head>
+<body>
+
+    <header class="portada">
+  <nav class="navbar">
+    <div class="logo">
+      <a href="#">BRIÈL</a>
+    </div>
+
+    <!-- Menú de enlaces -->
+    <div class="nav-links">
+      <a href="#dulces">Dulces</a>
+      <a href="#salados">Salados</a>
+      <a href="#contacto" class="nav-link">Contacto</a>
+      <a href="#creadores" class="nav-link">Acerca de nosotros</a>
+    </div>
+  </nav>
+
+  <!-- SECCIÓN HERO (LOGO Y TARJETA BLANCA) -->
+  <div class="hero-container">
+    <div class="imagen-banner">
+      <img src="../static/briel.png" alt="BRIÈL Bakery" class="logo-principal">
+    </div>
+
+    <div class="tarjeta-presentacion">
+      <h2>Nace BRIÈL, un espacio donde lo artesanal se encuentra con lo estético.</h2>
+      <p>Dulce, cálido y hecho con dedicación en cada detalle.</p>
+    </div>
+  </div>
+</header>
+
+    <!-- SECCIÓN ACERCA DE NOSOTROS -->
+    <section class="banner-presentacion" id="acerca">
+        <div class="contenido-banner">
+            <h2>Personalizamos cada detalle para hacer único tu evento.</h2>
+            <p class="descripcion-banner">
+                  En <strong>BRIÈL </strong> realizamos cookies, cupcakes, tortas y mesas dulces personalizadas para cumpleaños, bautismos, baby showers, eventos corporativos y ocasiones especiales. Diseñamos cada creación según la temática, colores y estilo que imagines, combinando presentación estética con el sabor casero que nos caracteriza. 
+            </p>
+            <div class="destacado-contacto">
+                <span class="icono">📩</span>
+                <p>Consultanos por tu idea y la hacemos realidad.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="dulces" class="seccion-catalogo">
+      <h2 class="titulo-seccion">Opciones Dulces</h2>
+      <p class="subtitulo-seccion">Para los que siempre tienen un lugar para el postre.</p>
+
+      <div class="productos-grid">
+
+  <!-- Tarjeta 1: Torta Matilda -->
+        <div class="card-container" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="imagen-placeholder">
+                <img src="../static/matilda.png" alt="Torta Matilda" class="card-img">
+              </div>
+              <div class="info-producto">
+                <h3>Torta Matilda</h3>
+                <p>Un clásico inolvidable compuesto por un bizcochuelo denso y superhúmedo de puro cacao, abrazado por una generosa capa de fudge de chocolate. Rica, suntuosa y pensada para los paladares más golosos.</p>
+                <span class="tap-hint">Ver tamaños ↻</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>Torta Matilda</h3>
+              <p class="subtitle-sizes">Seleccioná un tamaño:</p>
+              <div class="size-options">
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Chica (14 cm)', event)">Chica (14 cm)</button>
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Mediana (22 cm)', event)">Mediana (22 cm)</button>
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Grande (26 cm)', event)">Grande (26 cm)</button>
+              </div>
+              <button type="button" class="btn-consultar" onclick="enviarWhatsApp('Torta Matilda', event)">
+                Consultar por esta tarta
+              </button>
+              <span class="tap-hint">Volver ↺</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2: Tarta de Ricota -->
+        <div class="card-container" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="imagen-placeholder">
+                <img src="../static/ricota.png" alt="Tarta de Ricota">
+              </div>
+              <div class="info-producto">
+                <h3>Tarta de Ricota</h3>
+                <p>Un clásico de la repostería tradicional. Relleno suave, cremoso y delicadamente perfumado con ralladura de limón, envuelto en una masa sablée dorada y suave.</p>
+                <span class="tap-hint">Ver tamaños ↻</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>Tarta de Ricota</h3>
+              <p class="subtitle-sizes">Seleccioná un tamaño:</p>
+              <div class="size-options">
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Chica (14 cm)', event)">Chica (14 cm)</button>
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Mediana (22 cm)', event)">Mediana (22 cm)</button>
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Grande (26 cm)', event)">Grande (26 cm)</button>
+              </div>
+              <button type="button" class="btn-consultar" onclick="enviarWhatsApp('Tarta de Ricota', event)">
+                Consultar por esta tarta
+              </button>
+              <span class="tap-hint">Volver ↺</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 3: Tiramisu -->
+        <div class="card-container" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="imagen-placeholder">
+                <img src="../static/vainilla.png" alt="Tiramisú">
+              </div>
+              <div class="info-producto">
+                <h3>Tiramisú</h3>
+                <p>Elegancia y frescura en cada cucharada. Vainillas embebidas en café de especialidad y un toque de licor, combinadas con una cremosa preparación a base de queso mascarpone y espolvoreado con cacao amargo.</p>
+                <span class="tap-hint">Ver tamaños ↻</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>Tiramisú</h3>
+              <p class="subtitle-sizes">Seleccioná un tamaño:</p>
+              <div class="size-options">
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Chica (14 cm)', event)">Chica (14 cm)</button>
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Mediana (22 cm)', event)">Mediana (22 cm)</button>
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Grande (26 cm)', event)">Grande (26 cm)</button>
+              </div>
+              <button type="button" class="btn-consultar" onclick="enviarWhatsApp('Tiramisu', event)">
+                Consultar por este postre
+              </button>
+              <span class="tap-hint">Volver ↺</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 4: Key Lime -->
+        <div class="card-container" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="imagen-placeholder">
+                <img src="../static/lemon.png" alt="Key Lime">
+              </div>
+              <div class="info-producto">
+                <h3>Key Lime</h3>
+                <p>El equilibrio perfecto entre lo dulce y lo cítrico. Una base crocante de galletitas rellena con una crema suave de lima fresca y coronada con copos de merengue tostado.</p>
+                <span class="tap-hint">Ver tamaños ↻</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>Key Lime</h3>
+              <p class="subtitle-sizes">Seleccioná un tamaño:</p>
+              <div class="size-options">
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Chica (14 cm)', event)">Chica (14 cm)</button>
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Mediana (22 cm)', event)">Mediana (22 cm)</button>
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Grande (26 cm)', event)">Grande (26 cm)</button>
+              </div>
+              <button type="button" class="btn-consultar" onclick="enviarWhatsApp('Key Lime', event)">
+                Consultar por esta tarta
+              </button>
+              <span class="tap-hint">Volver ↺</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 5: Pastafrola de Membrillo/Batata -->
+        <div class="card-container" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="imagen-placeholder">
+                <img src="../static/batata.png" alt="Pastafrola de Membrillo/Batata">
+              </div>
+              <div class="info-producto">
+                <h3>Pastafrola de Membrillo/Batata</h3>
+                <p>Un clásico que nunca falla para la merienda. Masa frola casera, tierna y mantecosa, cubierta con suave dulce de membrillo o batata y el tradicional enrejado de masa.</p>
+                <span class="tap-hint">Ver tamaños ↻</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>Pastafrola</h3>
+              <p class="subtitle-sizes">Seleccioná un tamaño:</p>
+              <div class="size-options">
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Chica (14 cm)', event)">Chica (14 cm)</button>
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Mediana (22 cm)', event)">Mediana (22 cm)</button>
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Grande (26 cm)', event)">Grande (26 cm)</button>
+              </div>
+              <button type="button" class="btn-consultar" onclick="enviarWhatsApp('Pastafrola de Membrillo/Batata', event)">
+                Consultar por esta tarta
+              </button>
+              <span class="tap-hint">Volver ↺</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 6: Pastafrola de DDL con Nueces -->
+        <div class="card-container" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="imagen-placeholder">
+                <img src="../static/nuez.png" alt="Pastafrola de Dulce de Leche con Nueces">
+              </div>
+              <div class="info-producto">
+                <h3>Pastafrola DDL con Nueces</h3>
+                <p>Una versión gourmet de la clásica pastafrola. Abundante relleno de dulce de leche repostero combinado con trozos de nueces crocantes sobre nuestra masa suave.</p>
+                <span class="tap-hint">Ver tamaños ↻</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>Pastafrola DDL con Nueces</h3>
+              <p class="subtitle-sizes">Seleccioná un tamaño:</p>
+              <div class="size-options">
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Chica (14 cm)', event)">Chica (14 cm)</button>
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Mediana (22 cm)', event)">Mediana (22 cm)</button>
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Grande (26 cm)', event)">Grande (26 cm)</button>
+              </div>
+              <button type="button" class="btn-consultar" onclick="enviarWhatsApp('Pastafrola DDL con Nueces', event)">
+                Consultar por esta tarta
+              </button>
+              <span class="tap-hint">Volver ↺</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 7: Lemon Pie -->
+        <div class="card-container" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="imagen-placeholder">
+                <img src="../static/pie-lemon.png" alt="Lemon Pie">
+              </div>
+              <div class="info-producto">
+                <h3>Lemon Pie</h3>
+                <p>Un favorito de siempre. Base crocante de masa sablée, suave relleno de crema de limón con el nivel justo de acidez y un abundante merengue italiano dorado y aireado.</p>
+                <span class="tap-hint">Ver tamaños ↻</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>Lemon Pie</h3>
+              <p class="subtitle-sizes">Seleccioná un tamaño:</p>
+              <div class="size-options">
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Chica (14 cm)', event)">Chica (14 cm)</button>
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Mediana (22 cm)', event)">Mediana (22 cm)</button>
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Grande (26 cm)', event)">Grande (26 cm)</button>
+              </div>
+              <button type="button" class="btn-consultar" onclick="enviarWhatsApp('Lemon Pie', event)">
+                Consultar por esta tarta
+              </button>
+              <span class="tap-hint">Volver ↺</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 8: CheeseCake -->
+        <div class="card-container" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="imagen-placeholder">
+                <img src="../static/frutos.png" alt="CheeseCake">
+              </div>
+              <div class="info-producto">
+                <h3>CheeseCake</h3>
+                <p>Textura suave y cremosa sobre una crocante base de galletitas, terminada con un baño artesanal de salsa de frutos rojos frescos.</p>
+                <span class="tap-hint">Ver tamaños ↻</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>CheeseCake</h3>
+              <p class="subtitle-sizes">Seleccioná un tamaño:</p>
+              <div class="size-options">
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Chica (14 cm)', event)">Chica (14 cm)</button>
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Mediana (22 cm)', event)">Mediana (22 cm)</button>
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Grande (26 cm)', event)">Grande (26 cm)</button>
+              </div>
+              <button type="button" class="btn-consultar" onclick="enviarWhatsApp('CheeseCake', event)">
+                Consultar por esta tarta
+              </button>
+              <span class="tap-hint">Volver ↺</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 9: Coco Con Dulce De Leche -->
+        <div class="card-container" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="imagen-placeholder">
+                <img src="../static/coco.png" alt="Coco Con Dulce De Leche">
+              </div>
+              <div class="info-producto">
+                <h3>Coco Con Dulce De Leche</h3>
+                <p>La combinación más querida. Una base crocante cargada con una capa generosa de dulce de leche repostero y cubierta con una dorada y jugosa cubierta de coco.</p>
+                <span class="tap-hint">Ver tamaños ↻</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>Coco con Dulce de Leche</h3>
+              <p class="subtitle-sizes">Seleccioná un tamaño:</p>
+              <div class="size-options">
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Chica (14 cm)', event)">Chica (14 cm)</button>
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Mediana (22 cm)', event)">Mediana (22 cm)</button>
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Grande (26 cm)', event)">Grande (26 cm)</button>
+              </div>
+              <button type="button" class="btn-consultar" onclick="enviarWhatsApp('Coco con Dulce de Leche', event)">
+                Consultar por esta tarta
+              </button>
+              <span class="tap-hint">Volver ↺</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 10: Limon y Arandanos -->
+        <div class="card-container" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="imagen-placeholder">
+                <img src="../static/limon.png" alt="Limon y Arandanos">
+              </div>
+              <div class="info-producto">
+                <h3>Limon y Arandanos</h3>
+                <p>Una propuesta fresca y sofisticada. Masa sablée rellena de una delicada crema de limón y decorada con arándanos frescos que aportan un toque de frescura único.</p>
+                <span class="tap-hint">Ver tamaños ↻</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>Limón y Arándanos</h3>
+              <p class="subtitle-sizes">Seleccioná un tamaño:</p>
+              <div class="size-options">
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Chica (14 cm)', event)">Chica (14 cm)</button>
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Mediana (22 cm)', event)">Mediana (22 cm)</button>
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Grande (26 cm)', event)">Grande (26 cm)</button>
+              </div>
+              <button type="button" class="btn-consultar" onclick="enviarWhatsApp('Limón y Arándanos', event)">
+                Consultar por esta tarta
+              </button>
+              <span class="tap-hint">Volver ↺</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 11: Mini Alfajores De Maicena X15 -->
+        <div class="card-container" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="imagen-placeholder">
+                <img src="../static/mini-alfajorcitos.png" alt="Mini Alfajores De Maicena X15">
+              </div>
+              <div class="info-producto">
+                <h3>Mini Alfajores De Maicena X15</h3>
+                <p>Bocaditos suaves que se deshacen en la boca. Tapitas súper tiernas rellenas con abundante dulce de leche repostero y el infaltable toque de coco rallado. ¡El acompañamiento perfecto para la merienda!</p>
+                <span class="tap-hint">Ver opciones ↻</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>Mini Alfajorcitos</h3>
+              <p class="subtitle-sizes">Seleccioná la cantidad:</p>
+              <div class="size-options">
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Caja x15', event)">Caja x 15 u.</button>
+                
+              </div>
+              <button type="button" class="btn-consultar" onclick="enviarWhatsApp('Mini Alfajores De Maicena', event)">
+                Consultar producto
+              </button>
+              <span class="tap-hint">Volver ↺</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 12: Mini Cookies X10 -->
+        <div class="card-container" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="imagen-placeholder">
+                <img src="../static/minis-cookies.png" alt="Mini Cookies X10">
+              </div>
+              <div class="info-producto">
+                <h3>Mini Cookies X10</h3>
+                <p>Deliciosas galletitas en versión mini, doraditas por fuera y suaves por dentro, repleta de trozos de chocolate para disfrutar en cada bocado.</p>
+                <span class="tap-hint">Ver opciones ↻</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>Mini Cookies</h3>
+              <p class="subtitle-sizes">Seleccioná la cantidad:</p>
+              <div class="size-options">
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Bolsita x10', event)">Bolsita x 10 u.</button>
+                
+              </div>
+              <button type="button" class="btn-consultar" onclick="enviarWhatsApp('Mini Cookies', event)">
+                Consultar producto
+              </button>
+              <span class="tap-hint">Volver ↺</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 13: Roll De Canela -->
+        <div class="card-container" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="imagen-placeholder">
+                <img src="../static/roll.png" alt="Roll De Canela">
+              </div>
+              <div class="info-producto">
+                <h3>Roll De Canela</h3>
+                <p>Esponjosos, suaves y tibios. Masa aireada enroscada con una combinación perfecta de canela y azúcar, terminados con un toque de glaseado cremoso.</p>
+                <span class="tap-hint">Ver opciones ↻</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>Roll De Canela</h3>
+              <p class="subtitle-sizes"></p>
+              <div class="size-options">
+            
+              </div>
+              <button type="button" class="btn-consultar" onclick="enviarWhatsApp('Roll De Canela', event)">
+                Consultar producto
+              </button>
+              <span class="tap-hint">Volver ↺</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 14: Tarta De Frutilla -->
+        <div class="card-container" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="imagen-placeholder">
+                <img src="../static/mini-frutilla.png" alt="Tarta De Frutilla">
+              </div>
+              <div class="info-producto">
+                <h3>Tarta De Frutilla</h3>
+                <p>Fresca, colorida y deliciosa. Una crocante base de masa sablée rellena de suave crema chantilly, cubierta con frutillas frescas seleccionadas y un brillo artesanal.</p>
+                <span class="tap-hint">Ver tamaños ↻</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>Tarta De Frutilla</h3>
+              <p class="subtitle-sizes"></p>
+              <div class="size-options">
+                
+              </div>
+              <button type="button" class="btn-consultar" onclick="enviarWhatsApp('Tarta De Frutilla', event)">
+                Consultar por esta tarta
+              </button>
+              <span class="tap-hint">Volver ↺</span>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- Cierre grid-productos dulces -->
+    </section>
+
+    <!-- SECCIÓN SALADOS -->
+    <section id="salados" class="seccion-catalogo seccion-alt">
+      <h2 class="titulo-seccion">Opciones Saladas</h2>
+      <p class="subtitulo-seccion">Sabores delicados y hojaldres artesanales para acompañar cualquier momento.</p>
+
+      <div class="productos-grid">
+        
+        <!-- Salado 1: Chipa -->
+        <div class="card-container" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="imagen-placeholder">                 
+        
+                <img src="../static/chipa.png" alt="Chipa">
+              </div>
+              <div class="info-producto">
+                <h3>Chipa</h3>
+                <p>Tradicionales bocaditos horneados a base de fécula de mandioca y una selección de quesos criollos. Doraditos, crocantes por fuera y súper suavecitos por dentro.</p>
+                <span class="tap-hint">Ver opciones ↻</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>Chipa</h3>
+              <p class="subtitle-sizes"></p>
+              <div class="size-options">
+                
+              </div>
+              <button type="button" class="btn-consultar" onclick="enviarWhatsApp('Chipa', event)">
+                Consultar producto
+              </button>
+              <span class="tap-hint">Volver ↺</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Salado 2: Bolsita De Chipa X6 -->
+        <div class="card-container" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="imagen-placeholder">
+                <img src="../static/mini-chipa.png" alt="Bolsita De Chipa X6">
+              </div>
+              <div class="info-producto">
+                <h3>Bolsita De Chipa X6</h3>
+                <p>Presentación individual de nuestros clásicos chipás horneados de puro queso, crocantes y calentitos para llevar o compartir.</p>
+                <span class="tap-hint">Ver detalles ↻</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>Bolsita De Chipa X6</h3>
+              <p class="subtitle-sizes"></p>
+              <button type="button" class="btn-consultar" onclick="enviarWhatsApp('Bolsita De Chipa X6', event)">
+                Consultar por WhatsApp
+              </button>
+              <span class="tap-hint">Volver ↺</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Salado 3: Scones -->
+        <div class="card-container" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="imagen-placeholder">
+                <img src="../static/scon.png" alt="Scones">
+              </div>
+              <div class="info-producto">
+                <h3>Scones</h3>
+                <p>Suaves pancitos caseros saborizados con queso y hierbas, ideales para comer solos o rellenar con lo que más te guste.</p>
+                <span class="tap-hint">Ver opciones ↻</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>Scones</h3>
+              <p class="subtitle-sizes"></p>
+              <div class="size-options">
+                
+              </div>
+              <button type="button" class="btn-consultar" onclick="enviarWhatsApp('Scones Salados', event)">
+                Consultar producto
+              </button>
+              <span class="tap-hint">Volver ↺</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Salado 4: Chips -->
+        <div class="card-container" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="imagen-placeholder">
+                <img src="../static/chips.png" alt="Chips">
+              </div>
+              <div class="info-producto">
+                <h3>Chips Diferentes sabores</h3>
+                <p>Deliciosos pancitos chips súper suaves y esponjosos, rellenos en variedades.</p>
+                <span class="tap-hint">Ver opciones ↻</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>Chips Variados</h3>
+              <p class="subtitle-sizes">Seleccioná la cantidad:</p>
+              <div class="size-options">
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Docena', event)">1 Docena</button>
+              </div>
+              <button type="button" class="btn-consultar" onclick="enviarWhatsApp('Chips Diferentes sabores', event)">
+                Consultar producto
+              </button>
+              <span class="tap-hint">Volver ↺</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Salado 5: Torta Salada -->
+        <div class="card-container" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="imagen-placeholder">
+                <img src="../static/torta-salada.png" alt="Torta Salada">
+              </div>
+              <div class="info-producto">
+                <h3>Torta Salada</h3>
+                <p>Una vistosa torre de pan de miga fresco rellena con capas de jamón, queso y aderezos caseros, decorada artesanalmente en la superficie con fiambres seleccionados.</p>
+                <span class="tap-hint">Ver opciones ↻</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>Torta Salada</h3>
+              <p class="subtitle-sizes">Seleccioná el tamaño:</p>
+              <div class="size-options">
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Mediana', event)">Mediana</button>
+                <button type="button" class="size-btn" onclick="seleccionarTamaño(this, 'Grande', event)">Grande</button>
+              </div>
+              <button type="button" class="btn-consultar" onclick="enviarWhatsApp('Torta Salada', event)">
+                Consultar producto
+              </button>
+              <span class="tap-hint">Volver ↺</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Salado 6: Huevo Salado -->
+        <div class="card-container" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="imagen-placeholder">
+                <img src="../static/huevo-salado.png" alt="Huevo Salado">
+              </div>
+              <div class="info-producto">
+                <h3>Huevo Salado</h3>
+                <p>Una estructura salada única que esconde en su interior una combinación irresistible de quesos estacionados, fiambres artesanales y un toque casero impecable. Ideal para picar en familia.</p>
+                <span class="tap-hint">Ver detalles ↻</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>Huevo Salado</h3>
+              <p class="subtitle-sizes"></p>
+              <button type="button" class="btn-consultar" onclick="enviarWhatsApp('Huevo Salado', event)">
+                Consultar por WhatsApp
+              </button>
+              <span class="tap-hint">Volver ↺</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN BOXES / REGALOS -->
+    <section id="boxes" class="seccion-catalogo">
+      <h2 class="titulo-seccion">Nuestros Boxes</h2>
+      <p class="subtitulo-seccion">Especialmente diseñados para regalar, compartir o celebrar momentos únicos.</p>
+
+      <div class="productos-grid">
+        
+        <!-- Box 1 -->
+        <div class="card-container" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="imagen-placeholder">
+                <img src="../static/box-1.png" alt="Box Merienda">
+              </div>
+              <div class="info-producto">
+                <h3>Box Merienda</h3>
+                <p>La combinación perfecta para sorprender: incluye minis pastafrolas de membrillo, mini coco con dulce de leche, mini ricota y brownie. Presentado en una delicada bandeja.</p>
+                <span class="tap-hint">Ver detalles ↻</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>Box Merienda</h3>
+              <p class="subtitle-sizes"></p>
+              <button type="button" class="btn-consultar" onclick="enviarWhatsApp('Box Merienda', event)">
+                Consultar por este Box
+              </button>
+              <span class="tap-hint">Volver ↺</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Box 2 -->
+        <div class="card-container" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="imagen-placeholder">
+                <img src="../static/box-2.png" alt="Box Degustación">
+              </div>
+              <div class="info-producto">
+                <h3>Box Degustación</h3>
+                <p>Una selección de nuestras mejores porciones: mini pastafrola de membrillo, mini coco con dulce de leche, mini torta de ricota y scones dulces para probar de todo un poco.</p>
+                <span class="tap-hint">Ver detalles ↻</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>Box Degustación</h3>
+              <p class="subtitle-sizes"></p>
+              <button type="button" class="btn-consultar" onclick="enviarWhatsApp('Box Degustación', event)">
+                Consultar por este Box
+              </button>
+              <span class="tap-hint">Volver ↺</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Box 3 -->
+        <div class="card-container" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="imagen-placeholder">
+                <img src="../static/box-3.png" alt="Box Dulce">
+              </div>
+              <div class="info-producto">
+                <h3>Box Dulce</h3>
+                <p>Una propuesta ideal para compartir: mini pastafrola de membrillo, mini coco con dulce de leche, mini brownie y alfajores de maicena.</p>
+                <span class="tap-hint">Ver detalles ↻</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>Box Dulce</h3>
+              <p class="subtitle-sizes"></p>
+              <button type="button" class="btn-consultar" onclick="enviarWhatsApp('Box Dulce', event)">
+                Consultar por este Box
+              </button>
+              <span class="tap-hint">Volver ↺</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Box 4 -->
+        <div class="card-container" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="imagen-placeholder">
+                <img src="../static/box-4.png" alt="Box Matero">
+              </div>
+              <div class="info-producto">
+                <h3>Box Matero</h3>
+                <p>Una propuesta ideal para los team salado: Chipa, scones y chips a elección.</p>
+                <span class="tap-hint">Ver detalles ↻</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>Box Matero</h3>
+              <p class="subtitle-sizes"></p>
+              <button type="button" class="btn-consultar" onclick="enviarWhatsApp('Box Matero', event)">
+                Consultar por este Box
+              </button>
+              <span class="tap-hint">Volver ↺</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contacto" class="seccion-contacto">
+      <div class="contacto-container">
+        <h2 class="titulo-seccion">Seguinos en Instagram</h2>
+        <p class="subtitulo-seccion">
+          Enterate de las novedades, mirá nuestros pedidos diarios y hacé tu consulta.
+        </p>
+
+        <a href="https://www.instagram.com/briel.bakery/" target="_blank" rel="noopener noreferrer" class="btn-instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          <span>@briel.bakery</span>
+        </a>
+      </div>
+    </section>
+
+<!-- Sección que estará más abajo en la página -->
+<section id="creadores" class="seccion-creadores">
+  <h2>Nuestra Historia</h2>
+  <p class="subtitulo">Detrás de BRIÈL Bakery</p>
+
+  <div class="tarjeta-creadores">
+    <p>
+      Conocé a quienes le dan vida a <strong>BRIÈL</strong>.
+
+     Somos apasionados del detalle y creyentes de que un gran sabor conecta a las personas. <strong>BRIÈL</strong> es el resultado de combinar la calidez de la repostería artesanal con la elegancia del diseño moderno, creando piezas únicas diseñadas para transformar cualquier encuentro en una verdadera fiesta
+  </div>
+</section>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a 
+      href="https://wa.me/5491123901423?text=Hola!%20Quisiera%20consultar%20por..." 
+      class="whatsapp-float" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      aria-label="Contactar por WhatsApp"
+    >
+        <svg viewBox="0 0 32 32" class="whatsapp-icon">
+            <path fill="currentColor" d="M16 2a13 13 0 0 0-11.25 19.53L3 29l7.68-1.7A13 13 0 1 0 16 2zm0 23.86a10.8 10.8 0 0 1-5.52-1.5l-.4-.24-4.57 1 1.03-4.45-.26-.43A10.85 10.85 0 1 1 16 25.86zm5.95-8.13c-.33-.16-1.93-.95-2.23-1.06-.3-.11-.52-.16-.74.16s-.85 1.06-1.05 1.28-.39.25-.72.08a9.12 9.12 0 0 1-2.68-1.65 10 10 0 0 1-1.85-2.31c-.19-.33 0-.5.15-.66.14-.14.33-.39.49-.58.16-.2.22-.33.33-.55.11-.22.05-.41-.03-.58s-.74-1.78-1.01-2.44c-.26-.64-.53-.55-.73-.56h-.62c-.22 0-.58.08-.88.41A3.68 3.68 0 0 0 8.5 11.23a6.4 6.4 0 0 0 1.34 3.39c.16.22 2.3 3.52 5.58 4.94.78.34 1.39.54 1.86.69.78.25 1.5.21 2.07.13.63-.09 1.93-.79 2.2-1.55.27-.77.27-1.42.19-1.56-.08-.13-.3-.21-.63-.37z"/>
+        </svg>
+    </a>
+
+    <script src="../static/js/app.js"></script>
+
+    <script>
+  let tamanoSeleccionado = "";
+
+  function seleccionarTamaño(elemento, tamano, event) {
+    if (event) event.stopPropagation();
+
+    let contenedorOpciones = elemento.parentElement;
+    let botones = contenedorOpciones.querySelectorAll('.size-btn');
+    botones.forEach(btn => btn.classList.remove('active'));
+
+    elemento.classList.add('active');
+    tamanoSeleccionado = tamano;
+  }
+
+  function enviarWhatsApp(producto, event) {
+    if (event) event.stopPropagation();
+
+    const telefono = "5491123901423";
+    let texto = `Hola BRIÈL! Quisiera consultar por la ${producto}`;
+
+    if (tamanoSeleccionado !== "") {
+      texto += ` en tamaño ${tamanoSeleccionado}`;
+    }
+
+    const url = `https://wa.me/${5491123901423}?text=${encodeURIComponent(texto)}`;
+    window.location.href = url; // Abre directamente WhatsApp
+  }
+</script>
+</body>
+</html>

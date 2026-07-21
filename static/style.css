@@ -1,0 +1,841 @@
+/* --- CONFIGURACIÓN GENERAL Y RESET --- */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f7f3ed;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #3b2d27;
+}
+
+/* --- PORTADA Y CENTRADO --- */
+.portada {
+  min-height: 100vh;
+  background-image: url('briel.png');
+  background-repeat: no-repeat;
+  background-position: center 30%;
+  background-size: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; /* Centra horizontalmente todo en la portada */
+  padding-bottom: 40px;
+}
+
+/* BARRA DE NAVEGACIÓN */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Pone el logo a la izq y los links a la der */
+  align-items: center;
+  padding: 20px 40px;
+  background-color: transparent;
+}
+
+/* Oculta el checkbox de control móvil */
+.menu-checkbox {
+  display: none !important;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+}
+
+/* Logo BRIÈL */
+.logo a {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #3e2723;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+/* Enlaces del Menú (PC) */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none !important;
+  color: #2b231f;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding-bottom: 3px;
+}
+
+.nav-links a:hover {
+  color: #8c7a6b;
+  border-bottom: 1.5px solid #8d6e63;
+}
+
+/* Botón 3 puntos (Oculto en PC) */
+.kebab-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 32px;
+  height: 32px;
+  padding: 6px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid #e0d7ce;
+  cursor: pointer;
+}
+
+.kebab-btn .dot {
+  width: 4px;
+  height: 4px;
+  background-color: #3e2723;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+/* Estructura centrada del Hero/Portada */
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 30px;
+  text-align: center;
+}
+
+/* Tarjeta blanca centrada */
+.tarjeta-presentacion {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 600px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.tarjeta-presentacion h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: #2b231f;
+  margin-bottom: 10px;
+}
+
+.tarjeta-presentacion p {
+  font-style: italic;
+  color: #7a7068;
+}
+
+/* --- TARJETA DE PORTADA (AQUÍ ESTÁ EL CENTRADO PERFECCIONADO) --- */
+.tarjeta-contenedor,
+.hero-card {
+  text-align: center;
+  max-width: 650px;
+  width: 90%;
+  margin: 0 auto 30px auto; /* Centra perfectamente horizontal y separa del fondo */
+  background: rgba(255, 255, 255, 0.9);
+  padding: 36px 28px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0px 15px 35px rgba(74, 59, 50, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+.tarjeta-contenedor h1,
+.hero-card h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #2c221e;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.tarjeta-contenedor p,
+.hero-card p {
+  font-size: 1rem;
+  color: #635248;
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* --- SECCIONES DE CATÁLOGO --- */
+.seccion-catalogo {
+  width: 95%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 60px 0;
+  text-align: center !important;
+}
+
+.seccion-alt {
+  background-color: #f2ebe1;
+  width: 100%;
+  max-width: 100%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+}
+
+.titulo-seccion {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.2rem;
+  color: #2c221e;
+  margin-bottom: 8px;
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.subtitulo-seccion {
+  color: #705e54;
+  font-size: 1rem;
+  margin-bottom: 40px;
+  font-style: italic;
+  text-align: center !important;
+  max-width: 600px;
+  margin: 8px auto 30px auto !important;
+}
+
+.seccion-header {
+  text-align: center !important;
+}
+
+.seccion-header p {
+  text-align: center !important;
+  max-width: 600px;
+  margin: 8px auto 30px auto !important;
+}
+
+.seccion-catalogo h2,
+.seccion-catalogo p {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* --- GRILLA FLEXIBLE DE PRODUCTOS Y TARJETAS 3D --- */
+.grid-productos,
+.productos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Contenedor principal de cada tarjeta */
+.card-container {
+  width: 320px;
+  max-width: 380px;
+  height: 480px;
+  perspective: 1000px;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Elemento interno que gira */
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-style: preserve-3d;
+}
+
+/* Clase que activa el giro al hacer clic */
+.card-container.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Caras frontal y trasera */
+.card-front, 
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* FRENTE DE TARJETA */
+.card-img,
+.card-front .imagen-placeholder,
+.card-front img.card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-content,
+.info-producto {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.card-content h3, 
+.card-back h3,
+.info-producto h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.25rem;
+  color: #2c221e;
+  margin-bottom: 8px;
+}
+
+.card-content p,
+.info-producto p {
+  font-size: 0.9rem;
+  color: #635248;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+/* ESTILOS DE TARJETA ESTÁTICA (MANTENIDOS) */
+.tarjeta-producto {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #efe5db;
+  box-shadow: 0px 10px 22px rgba(74, 59, 50, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 240px;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .tarjeta-producto {
+    max-width: calc(33.333% - 18px);
+  }
+}
+
+.tarjeta-producto:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 16px 30px rgba(74, 59, 50, 0.1);
+}
+
+.imagen-placeholder {
+  width: 100%;
+  height: 240px;
+  background-color: #f3ece3;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.imagen-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.tarjeta-producto:hover .imagen-placeholder img {
+  transform: scale(1.05);
+}
+
+/* DORSO DE TARJETA */
+.card-back {
+  transform: rotateY(180deg);
+  padding: 25px 20px;
+  box-sizing: border-box;
+  background-color: #fdfaf7;
+  justify-content: space-between;
+}
+
+.subtitle-sizes {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #7a7068;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.sizes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.sizes-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+}
+
+.sizes-list li strong {
+  color: #2b231f;
+  font-size: 1rem;
+}
+
+.sizes-list li span {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* BOTONES DE TAMAÑO EN DORSO */
+.size-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 15px 0 20px 0;
+  width: 100%;
+}
+
+.size-btn {
+  background-color: #fdfaf7;
+  color: #2b231f;
+  border: 1px solid #e2d9d0;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  outline: none;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.size-btn:hover {
+  background-color: #f5ede4;
+  border-color: #2b231f;
+  transform: translateY(-1px);
+}
+
+.size-btn.active {
+  background-color: #2b231f !important;
+  color: #ffffff !important;
+  border-color: #2b231f !important;
+  box-shadow: 0 3px 8px rgba(43, 35, 31, 0.2);
+}
+
+/* BOTÓN DE CONSULTA */
+.btn-consultar {
+  width: 100%;
+  background-color: #2b231f;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: auto;
+}
+
+.btn-consultar:hover {
+  background-color: #4a3e37;
+  transform: translateY(-1px);
+}
+
+.tap-hint {
+  font-size: 0.8rem;
+  color: #aaa;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Control de capas interactivo al girar */
+.card-container.flipped .card-front {
+  pointer-events: none;
+}
+
+.card-container.flipped .card-back {
+  pointer-events: auto;
+  z-index: 2;
+}
+
+/* --- BANNER DE PRESENTACIÓN DE BRIÈL --- */
+.banner-presentacion {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto 50px auto;
+  background: #ffffff;
+  padding: 36px 30px;
+  border-radius: 20px;
+  border: 1px solid #ebdcd0;
+  box-shadow: 0px 10px 25px rgba(74, 59, 50, 0.05);
+  text-align: center;
+}
+
+.banner-presentacion h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.6rem;
+  color: #2c221e;
+  font-weight: 600;
+  margin-bottom: 16px;
+  line-height: 1.35;
+}
+
+.banner-presentacion .descripcion-banner {
+  font-size: 0.98rem;
+  color: #58483f;
+  line-height: 1.65;
+  font-weight: 300;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+}
+
+.banner-presentacion .descripcion-banner strong {
+  color: #2c221e;
+  font-weight: 600;
+}
+
+.destacado-contacto {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #f8f2eb;
+  padding: 10px 22px;
+  border-radius: 30px;
+  border: 1px solid #e2d3c5;
+}
+
+.destacado-contacto .icono {
+  font-size: 1.2rem;
+}
+
+.destacado-contacto p {
+  font-size: 0.95rem;
+  color: #3b2d27;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* --- SECCIÓN CREADORES --- */
+.seccion-creadores {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #fcf9f5;
+  color: #2b231f;
+}
+
+.seccion-creadores h2 {
+  font-family: 'Serif', serif;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.tarjeta-creadores {
+  max-width: 650px;
+  margin: 20px auto 0;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* --- SECCIÓN CONTACTO / INSTAGRAM --- */
+.seccion-contacto {
+  background-color: #fdfaf7;
+  padding: 35px 20px 45px 20px !important;
+  text-align: center;
+  border-top: 1px solid #f0ebe5;
+  border-bottom: 1px solid #f0ebe5;
+}
+
+.contacto-container {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px !important;
+}
+
+.btn-instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #2b231f;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  margin-top: 2px !important;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(43, 35, 31, 0.15);
+}
+
+.btn-instagram:hover {
+  background-color: #4a3e37;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(43, 35, 31, 0.25);
+}
+
+.btn-instagram svg {
+  transition: transform 0.3s ease;
+}
+
+.btn-instagram:hover svg {
+  transform: scale(1.1);
+}
+
+/* --- BOTÓN FLOTANTE WHATSAPP --- */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 55px;
+  height: 55px;
+  background-color: #25d366;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+}
+
+/* --- RESPONSIVE / MÓVILES --- */
+@media (max-width: 768px) {
+  .kebab-btn {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 30px;
+    background-color: #ffffff;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f0e8e0;
+  }
+
+  .menu-checkbox:checked ~ .nav-links {
+    display: flex;
+  }
+
+  /* Adaptación mobile para Logo y Hero */
+  .hero-img, 
+  .logo-principal,
+  .hero section img {
+    width: 90% !important;
+    max-width: none !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    display: block;
+  }
+
+  .hero, 
+  .hero-section {
+    padding: 30px 15px !important;
+  }
+}
+
+/* --- SECCIÓN CONTACTO / INSTAGRAM (AJUSTADO PARA SUBIR EL BOTÓN) --- */
+.seccion-contacto {
+  background-color: #fdfaf7;
+  padding: 25px 20px 30px 20px !important; /* Achicamos el relleno de la sección */
+  text-align: center;
+  border-top: 1px solid #f0ebe5;
+  border-bottom: 1px solid #f0ebe5;
+}
+
+.contacto-container {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px !important; /* Elimina casi todo el espacio entre elementos */
+}
+
+.contacto-container .subtitulo-seccion {
+  margin-bottom: 5px !important; /* Pega el subtítulo al botón */
+}
+
+.btn-instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #2b231f;
+  color: #ffffff;
+  padding: 12px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  margin-top: -10px !important; /* 👈 MARGEN NEGATIVO: Lo empuja físicamente hacia arriba */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(43, 35, 31, 0.15);
+}
+
+/* ==========================================
+   SECCIÓN CONTACTO / INSTAGRAM (REORDENADO)
+   ========================================== */
+.seccion-contacto {
+  background-color: #fdfaf7;
+  padding: 50px 20px 60px 20px !important; /* Espaciado uniforme superior e inferior */
+  text-align: center;
+  border-top: 1px solid #f0ebe5;
+  border-bottom: 1px solid #f0ebe5;
+}
+
+.contacto-container {
+  max-width: 650px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px !important; /* Espacio limpio y constante entre título, texto y botón */
+}
+
+/* Subtítulo bien separado del botón */
+.contacto-container .subtitulo-seccion,
+.seccion-contacto .subtitulo-seccion {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.5;
+  color: #705e54;
+  font-style: italic;
+}
+
+/* Botón asentado naturalmente sin márgenes negativos */
+.btn-instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #2b231f;
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  margin-top: 8px !important; /* Distancia perfecta desde el texto */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(43, 35, 31, 0.15);
+}
+
+.btn-instagram:hover {
+  background-color: #4a3e37;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(43, 35, 31, 0.25);
+}
+
+/* Compensación de desplazamiento para que la barra no tape el título */
+section {
+  scroll-margin-top: 80px; /* Ajusta la altura según lo que mida tu navbar */
+}
+
+/* --- 1. ARREGLO DE PORTADA (Quitamos la imagen de fondo repetida) --- */
+.portada {
+  min-height: auto;
+  /* Quitamos el background-image de acá para que NO se multiplique con el <img> del HTML */
+  background-image: none !important; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+/* --- 2. REGLAS MOBILE CORREGIDAS --- */
+@media (max-width: 768px) {
+
+  /* Ajustamos la barra superior */
+  .navbar {
+    padding: 15px 20px;
+    position: relative;
+  }
+
+  /* Mostramos los enlaces del menú ordenados en mobile */
+  .nav-links {
+    display: flex !important;
+    position: static !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 12px 18px !important;
+    padding: 10px 0 !important;
+    width: 100% !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    border: none !important;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem !important;
+  }
+
+  /* Ocultamos el botón de 3 puntos si prefieres ver los enlaces directos */
+  .kebab-btn {
+    display: none !important;
+  }
+
+  /* Tamaño del logo central en celular */
+  .logo-principal,
+  .hero-img,
+  .imagen-banner img {
+    width: 80% !important;
+    max-width: 280px !important;
+    height: auto !important;
+    margin: 15px auto !important;
+    display: block !important;
+  }
+
+  /* Ajuste de la tarjeta blanca para que entre perfecta en pantalla */
+  .tarjeta-presentacion,
+  .hero-card,
+  .tarjeta-contenedor {
+    width: 90% !important;
+    padding: 22px 18px !important;
+    margin: 15px auto !important;
+  }
+
+  .tarjeta-presentacion h2 {
+    font-size: 1.15rem !important;
+  }
+
+  .tarjeta-presentacion p {
+    font-size: 0.88rem !important;
+  }
+}
